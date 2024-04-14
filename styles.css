@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.container {
+  max-width: 450px;
+  background: #003333;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px 3px rgba(0, 0, 0, 0.4);
+  font-family: sans-serif;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.6);
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+  gap: 10px;
+}
+
+h1 {
+  font-size: 36px;
+  animation: fadeIn 1s ease-in-out, colorChange 5s infinite alternate;
+  color: #333;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Add text shadow for depth */
+}
+/* Styling for the "Guess a number between 1 and 100:" paragraph */
+p.guess-text {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Styling for the message paragraph */
+p#message {
+  font-size: 16px;
+  color: #007bff; /* Blue color for the message */
+  margin-top: 10px; /* Add some space at the top */
+}
+
+p {
+  color: #555;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-style: italic;
+  background-color: #003333;
+}
+.button {
+  margin-top: 25px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  background-color: red;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 25px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #0056b3;
+  transform: translateY(-3px);
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+input {
+  flex: 5;
+  height: 35px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  outline: none;
+  border-radius: 8px 0 0 8px;
+  padding: 0 10px;
+  transition: all 0.3s ease;
+}
+input[type="number"] {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 50px;
+  transition: all 0.3s ease;
+  outline: none; /* Remove default outline */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* for Mozila firefox */
+input {
+  -moz-appearance: textfield;
+}
+input[type="number"]:hover,
+input[type="number"]:focus {
+  background-color: #f0f0f0; /* Change background color on hover/focus */
+  border-color: #007bff; /* Change border color on hover/focus */
+  box-shadow: 0px 0px 5px rgba(0, 123, 255, 0.5); /* Add shadow on hover/focus */
+}
+
+input:hover {
+  background: #005050;
+  transform: scale(1.02);
+}
+
+/* for chrome, safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* for Mozila firefox */
+input {
+  -moz-appearance: textfield;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #fff;
+  }
+  50% {
+    color: #ffcc00;
+  }
+  100% {
+    color: #ff6699;
+  }
+}
+input:focus {
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
